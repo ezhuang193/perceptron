@@ -14,7 +14,7 @@ public class Main
 		int max_Iterations = 100;
 		BufferedReader br = new BufferedReader(new FileReader("1.txt"));
 		int[][] file = new int[20][30];
-		double label=0;
+		double label=8;
 		double actual_output=0;
 
 
