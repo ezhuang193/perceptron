@@ -136,8 +136,8 @@ for(int ff=0;ff<=601; ff++)
 		{
 			for (int j = 0; j < 30; j++)
 			{
-				double dick= file[g][j] * weights[f];
-				sum = sum + dick;
+				double total= file[g][j] * weights[f];
+				sum = sum + total;
 				f++;
 			}
 		}
