@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Perceptron_final
+public class Test
 {
 	public static void main(String[] args) throws Exception
 	{
@@ -11,7 +11,7 @@ public class Perceptron_final
 		double[] weights = new double[(height * width) + 1];
 		int epoch = 0;
 		int training_Size = 131;
-		int max_Iterations = 20;
+		int max_Iterations = 115;
 
 		double[][] file = new double[20][30];
 		double label = 8;
@@ -36,6 +36,8 @@ public class Perceptron_final
 				else
 				Files="data/train8/"+(i-1)+".txt";
 
+				//System.out.println(Files+"   "+label);
+				//Thread.sleep(50);
 
 				if(i==130)
 				{
@@ -65,6 +67,7 @@ public class Perceptron_final
 	}//while iteration
 
 	//Evaluation
+do{
 
 	Scanner kb = new Scanner(System.in);
 	System.out.print("Enter the path to the Image: ");
@@ -74,6 +77,8 @@ public class Perceptron_final
 	file2 		  = readFile(fileName);
 	double output_Result = sum_of_weights(file2, weights);
 	System.out.println(output_Result);
+
+	}while(true);
 /*
 for(int ff=0;ff<=601; ff++)
 {
@@ -152,9 +157,12 @@ for(int ff=0;ff<=601; ff++)
 			for (int j = 0; j < 30; j++)
 			{
 				weights[f] = weights[f] + (file[g][j] * learning_Rate * err);
+
+
 				f++;
 			}
 		}
+		weights[2] = weights[2] + (learning_Rate*err);
 	}
 
 
